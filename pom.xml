@@ -23,7 +23,7 @@
     <licenses>
         <license>
             <name>MIT</name>
-            <url>https://github.com/S-IT-GmbH/sit-service-bom/blob/master/LICENSE.md</url>
+            <url>https://raw.githubusercontent.com/S-IT-GmbH/sit-service-bom/refs/heads/main/LICENSE.md</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
