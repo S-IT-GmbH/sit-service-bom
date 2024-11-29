@@ -12,7 +12,7 @@
 
     <groupId>dev.sitconsulting</groupId>
     <artifactId>sit-service-bom</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>pom</packaging>
 
     <organization>
@@ -37,6 +37,7 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sit-metrics-autoconfiguration.version>0.0.1</sit-metrics-autoconfiguration.version>
+        <sit-service-starter.version>0.0.2</sit-service-starter.version>
         <plugin.central-publishing-maven-plugin.version>0.6.0</plugin.central-publishing-maven-plugin.version>
         <plugin.maven-site-plugin.version>4.0.0-M16</plugin.maven-site-plugin.version>
         <plugin.maven-project-info-reports-plugin.version>3.8.0</plugin.maven-project-info-reports-plugin.version>
@@ -51,6 +52,12 @@
                 <groupId>dev.sitconsulting</groupId>
                 <artifactId>sit-metrics-autoconfiguration</artifactId>
                 <version>${sit-metrics-autoconfiguration.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>dev.sitconsulting</groupId>
+                <artifactId>sit-service-starter</artifactId>
+                <version>${sit-service-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
