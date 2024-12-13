@@ -66,7 +66,6 @@
                 <artifactId>sit-spring-base-bom</artifactId>
                 <version>${sit-spring-base-bom.version}</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 </project>
