@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.5</version>
+        <groupId>dev.sitconsulting</groupId>
+        <artifactId>sit-spring-base-bom</artifactId>
+        <version>0.0.3</version>
     </parent>
 
     <groupId>dev.sitconsulting</groupId>
@@ -44,6 +44,7 @@
         <plugin.maven-source-plugin>3.3.1</plugin.maven-source-plugin>
         <plugin.maven-javadoc-plugin.version>3.11.1</plugin.maven-javadoc-plugin.version>
         <plugin.maven-gpg-plugin.version>3.2.7</plugin.maven-gpg-plugin.version>
+        <sit-spring-base-bom.version>0.0.3</sit-spring-base-bom.version>
     </properties>
 
     <dependencyManagement>
@@ -59,6 +60,13 @@
                 <artifactId>sit-service-starter</artifactId>
                 <version>${sit-service-starter.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>dev.sitconsulting</groupId>
+                <artifactId>sit-spring-base-bom</artifactId>
+                <version>${sit-spring-base-bom.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>
