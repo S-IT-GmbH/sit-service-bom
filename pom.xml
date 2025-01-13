@@ -6,20 +6,20 @@
 
     <parent>
         <groupId>dev.sitconsulting</groupId>
-        <artifactId>sit-spring-base-bom</artifactId>
-        <version>0.0.3</version>
+        <artifactId>sit-base-bom</artifactId>
+        <version>0.0.1</version>
     </parent>
 
     <groupId>dev.sitconsulting</groupId>
     <artifactId>sit-service-bom</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.6</version>
     <packaging>pom</packaging>
 
     <organization>
         <name>S-IT Application Engineering &amp; Consulting GmbH</name>
         <url>https://s-it.consulting</url>
     </organization>
-    <inceptionYear>2024</inceptionYear>
+    <inceptionYear>2025</inceptionYear>
     <licenses>
         <license>
             <name>MIT</name>
@@ -28,7 +28,7 @@
         </license>
     </licenses>
 
-    <description>S-IT Dependencies</description>
+    <description>S-IT Service Dependencies</description>
     <url>https://github.com/S-IT-GmbH/${project.artifactId}</url>
 
     <properties>
@@ -36,36 +36,33 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sit-metrics-autoconfiguration.version>0.0.3</sit-metrics-autoconfiguration.version>
-        <sit-service-starter.version>0.0.2</sit-service-starter.version>
-        <plugin.central-publishing-maven-plugin.version>0.6.0</plugin.central-publishing-maven-plugin.version>
-        <plugin.maven-site-plugin.version>4.0.0-M16</plugin.maven-site-plugin.version>
-        <plugin.maven-project-info-reports-plugin.version>3.8.0</plugin.maven-project-info-reports-plugin.version>
-        <plugin.maven-source-plugin>3.3.1</plugin.maven-source-plugin>
-        <plugin.maven-javadoc-plugin.version>3.11.1</plugin.maven-javadoc-plugin.version>
-        <plugin.maven-gpg-plugin.version>3.2.7</plugin.maven-gpg-plugin.version>
-        <sit-spring-base-bom.version>0.0.3</sit-spring-base-bom.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>dev.sitconsulting</groupId>
-                <artifactId>sit-metrics-autoconfiguration</artifactId>
-                <version>${sit-metrics-autoconfiguration.version}</version>
-            </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>dev.sitconsulting</groupId>
+            <artifactId>sit-metrics-autoconfiguration</artifactId>
+        </dependency>
 
-            <dependency>
-                <groupId>dev.sitconsulting</groupId>
-                <artifactId>sit-service-starter</artifactId>
-                <version>${sit-service-starter.version}</version>
-            </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
 
-            <dependency>
-                <groupId>dev.sitconsulting</groupId>
-                <artifactId>sit-spring-base-bom</artifactId>
-                <version>${sit-spring-base-bom.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <inherited>false</inherited>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <inherited>false</inherited>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
